@@ -2,20 +2,20 @@
 ОСНОВНЫЕ НАСТРОЙКИ
 ========================================= */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  }
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
 html {
 scroll-behavior: smooth;
 }
 
 body {
-background: #f5efe5;
-color: #1c1916;
 font-family: "Montserrat", sans-serif;
+background: #f4ecdf;
+color: #211e1a;
 overflow-x: hidden;
 }
 
@@ -24,9 +24,8 @@ color: inherit;
 text-decoration: none;
 }
 
-img {
-max-width: 100%;
-display: block;
+section {
+position: relative;
 }
 
 /* =========================================
@@ -34,309 +33,182 @@ display: block;
 ========================================= */
 
 .hero {
-position: relative;
-
-```
-min-height: 100vh;
-
+min-height: 100svh;
 display: flex;
-align-items: center;
 justify-content: center;
-
-padding: 50px 20px;
-
+align-items: center;
 text-align: center;
-
-color: #f8f1e5;
+padding: 70px 20px 50px;
 
 background:
     radial-gradient(
-        circle at 20% 20%,
-        rgba(199, 157, 76, 0.13),
-        transparent 30%
+        circle at 50% 35%,
+        rgba(203, 157, 72, 0.16),
+        transparent 35%
     ),
     radial-gradient(
-        circle at 80% 70%,
-        rgba(199, 157, 76, 0.10),
-        transparent 35%
+        circle at 15% 80%,
+        rgba(174, 126, 51, 0.10),
+        transparent 30%
     ),
     linear-gradient(
         135deg,
-        #0e0d0c,
-        #1a1714 55%,
-        #0b0a09
+        #161412 0%,
+        #24201b 50%,
+        #11100f 100%
     );
 
+color: #f5eee3;
 overflow: hidden;
-```
 
 }
 
-/* Декоративные золотые точки */
-
 .hero::before {
-content: "✦";
-
-```
+content: "";
 position: absolute;
-
-top: 12%;
-left: 12%;
-
-font-size: 18px;
-
-color: #c9a25a;
-
-opacity: 0.7;
-```
-
+width: 520px;
+height: 520px;
+border: 1px solid rgba(210, 170, 91, 0.13);
+border-radius: 50%;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 
 .hero::after {
-content: "✦";
-
-```
+content: "";
 position: absolute;
-
-right: 12%;
-bottom: 18%;
-
-font-size: 15px;
-
-color: #c9a25a;
-
-opacity: 0.7;
-```
-
+width: 700px;
+height: 700px;
+border: 1px solid rgba(210, 170, 91, 0.07);
+border-radius: 50%;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 
 .hero-content {
 position: relative;
-
-```
-width: 100%;
-max-width: 850px;
-
 z-index: 2;
-```
-
+width: 100%;
+max-width: 800px;
 }
 
 .eyebrow {
-font-size: 11px;
-
-```
-letter-spacing: 6px;
-
+font-size: 10px;
 font-weight: 500;
-
-color: #d1aa61;
-
+letter-spacing: 6px;
+color: #d2a85d;
 margin-bottom: 25px;
-```
-
 }
 
 .gold-line {
-width: 100px;
+width: 70px;
 height: 1px;
-
-```
 margin: 0 auto;
-
-background: #c49a4a;
-
-position: relative;
-```
-
-}
-
-.gold-line::after {
-content: "✦";
-
-```
-position: absolute;
-
-left: 50%;
-top: 50%;
-
-transform: translate(-50%, -50%);
-
-padding: 0 9px;
-
-background: #0e0d0c;
-
-color: #d1aa61;
-
-font-size: 13px;
-```
-
+background: linear-gradient(
+90deg,
+transparent,
+#d2a85d,
+transparent
+);
 }
 
 .hero h1 {
-margin-top: 35px;
-
-```
+margin-top: 32px;
 font-family: "Cormorant Garamond", serif;
-
-font-size: clamp(70px, 12vw, 145px);
-
-line-height: 0.82;
-
+font-size: clamp(64px, 12vw, 110px);
 font-weight: 400;
-
+line-height: 0.82;
 letter-spacing: -2px;
-```
-
 }
 
 .hero h1 span {
 display: block;
-
-```
-color: #d2aa5e;
-
+color: #d6ae64;
 font-style: italic;
-
 font-weight: 500;
-```
-
 }
 
 .hero-greeting {
-margin-top: 55px;
-
-```
+margin-top: 45px;
 font-family: "Cormorant Garamond", serif;
-
 font-size: 31px;
-
 font-weight: 500;
-
 color: #f7efe3;
-```
-
 }
 
 .hero-description {
 margin-top: 12px;
-
-```
 font-family: "Cormorant Garamond", serif;
-
 font-size: 21px;
-
 line-height: 1.5;
-
 color: #d9d0c3;
-```
-
 }
 
 .date-box {
 display: inline-flex;
-
-```
 align-items: center;
-
 gap: 20px;
-
 margin-top: 45px;
+padding: 15px 28px;
 
-padding: 13px 28px;
-
-border: 1px solid rgba(205, 164, 82, 0.7);
-
-background: rgba(255, 255, 255, 0.025);
+border: 1px solid rgba(205, 164, 82, 0.75);
+background: rgba(255, 255, 255, 0.035);
 
 box-shadow:
-    0 0 30px rgba(205, 164, 82, 0.05);
-```
+    0 0 30px rgba(205, 164, 82, 0.08),
+    inset 0 0 20px rgba(255, 255, 255, 0.02);
 
 }
 
 .date-number {
 font-family: "Cormorant Garamond", serif;
-
-```
-font-size: 62px;
-
+font-size: 64px;
 line-height: 0.8;
-
 color: #d5ad63;
-```
-
 }
 
 .date-info {
 display: flex;
-
-```
 flex-direction: column;
-
 align-items: flex-start;
-
 gap: 5px;
-```
-
 }
 
 .date-info strong {
 font-size: 13px;
-
-```
 letter-spacing: 3px;
-
 color: #f2eadc;
-```
-
 }
 
 .date-info span {
 font-size: 9px;
-
-```
 letter-spacing: 4px;
-
 color: #c39a50;
-```
-
 }
 
 .scroll-hint {
-margin-top: 65px;
-
-```
+margin-top: 60px;
 display: flex;
-
 flex-direction: column;
-
 align-items: center;
-
 gap: 13px;
 
 color: #a99f91;
-
 font-size: 8px;
-
 letter-spacing: 4px;
-```
 
 }
 
 .scroll-line {
 width: 1px;
-
-```
 height: 45px;
-
 background: linear-gradient(
-    to bottom,
-    #c59b4d,
-    transparent
+to bottom,
+#c59b4d,
+transparent
 );
-```
-
 }
 
 /* =========================================
@@ -344,146 +216,104 @@ background: linear-gradient(
 ========================================= */
 
 .countdown-section {
-position: relative;
-
-```
-padding: 95px 20px 100px;
-
+padding: 100px 20px 110px;
 text-align: center;
 
 background:
     radial-gradient(
         circle at 50% 0%,
-        rgba(202, 158, 77, 0.14),
-        transparent 42%
+        rgba(202, 158, 77, 0.18),
+        transparent 40%
     ),
     linear-gradient(
         180deg,
-        #faf5ec,
-        #eee4d4
+        #faf5ec 0%,
+        #eee3d2 100%
     );
 
 overflow: hidden;
-```
 
 }
 
 .countdown-section::before {
 content: "";
-
-```
 position: absolute;
-
-width: 500px;
-height: 500px;
-
-top: -250px;
+width: 600px;
+height: 600px;
+top: -310px;
 left: 50%;
-
 transform: translateX(-50%);
 
 border-radius: 50%;
-
-border: 1px solid rgba(192, 148, 68, 0.08);
+border: 1px solid rgba(192, 148, 68, 0.10);
 
 pointer-events: none;
-```
 
 }
 
-.countdown-section .section-label {
+.section-label {
 position: relative;
-
-```
 font-size: 10px;
-
 font-weight: 500;
-
 letter-spacing: 5px;
-
-color: #b48636;
-
+color: #ae8032;
 margin-bottom: 15px;
-```
-
 }
 
 .countdown-section h2 {
 position: relative;
 
-```
 font-family: "Cormorant Garamond", serif;
-
-font-size: clamp(50px, 7vw, 80px);
-
+font-size: clamp(50px, 8vw, 80px);
 line-height: 1;
-
 font-weight: 500;
-
-color: #1d1a17;
-```
+color: #241f1a;
 
 }
 
 .countdown-section .gold-line {
-margin-top: 30px;
-margin-bottom: 50px;
-
-```
+margin-top: 28px;
+margin-bottom: 55px;
 background: #c39a4b;
-```
-
-}
-
-.countdown-section .gold-line::after {
-background: #f3eadf;
 }
 
 /* =========================================
-КВАДРАТИКИ СЧЁТЧИКА
+КВАДРАТЫ ОБРАТНОГО ОТСЧЁТА
 ========================================= */
 
 .countdown {
 position: relative;
 
-```
 display: flex;
-
-align-items: center;
 justify-content: center;
+align-items: center;
 
-gap: 17px;
-
-max-width: 900px;
-
+gap: 15px;
+width: 100%;
+max-width: 950px;
 margin: 0 auto;
-```
 
 }
 
 .countdown-item {
 position: relative;
 
-```
-width: 160px;
-height: 160px;
+width: 155px;
+height: 155px;
 
 display: flex;
-
 flex-direction: column;
-
 justify-content: center;
 align-items: center;
 
 background:
     linear-gradient(
         145deg,
-        #292723,
-        #0e0d0c
+        #29251f,
+        #131210
     );
 
 border: 1px solid #c69b4b;
-
 border-radius: 14px;
 
 box-shadow:
@@ -493,145 +323,102 @@ box-shadow:
 transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-```
 
 }
 
-.countdown-item:hover {
+.countdown-item {
 transform: translateY(-6px);
 
-```
 box-shadow:
     0 22px 45px rgba(31, 25, 17, 0.25),
-    0 0 25px rgba(198, 155, 75, 0.16);
-```
+    0 0 25px rgba(198, 155, 75, 0.18);
 
 }
 
 .countdown-item::before {
 content: "";
 
-```
 position: absolute;
-
 inset: 7px;
 
 border: 1px solid rgba(214, 173, 94, 0.35);
-
 border-radius: 9px;
 
 pointer-events: none;
-```
 
 }
 
 .countdown-item::after {
 content: "✦";
 
-```
 position: absolute;
-
-top: 8px;
+top: 9px;
 left: 50%;
-
 transform: translateX(-50%);
 
 color: #d4aa5d;
-
 font-size: 12px;
-```
 
 }
 
 .countdown-item > div {
 position: relative;
 
-```
 font-family: "Cormorant Garamond", serif;
-
 font-size: 70px;
-
 line-height: 0.85;
-
 font-weight: 500;
 
 color: #d9b469;
 
 text-shadow:
     0 2px 15px rgba(0, 0, 0, 0.5);
-```
 
 }
 
 .countdown-item span {
 position: relative;
 
-```
 margin-top: 18px;
 
 font-size: 9px;
-
 font-weight: 500;
-
 letter-spacing: 4px;
 
 color: #eee5d7;
-```
 
 }
 
 .countdown-separator {
 font-family: "Cormorant Garamond", serif;
-
-```
 font-size: 38px;
-
 color: #bd9142;
-
 line-height: 1;
-```
-
 }
 
 .countdown-note {
 margin-top: 38px;
 
-```
 font-family: "Cormorant Garamond", serif;
-
-font-size: 26px;
-
+font-size: 25px;
 letter-spacing: 1px;
 
 color: #28231e;
-```
 
 }
 
 .countdown-note::before {
 content: "✦";
-
-```
 margin-right: 20px;
-
 color: #c09545;
-
 font-size: 14px;
-```
-
 }
 
 .countdown-note::after {
 content: "✦";
-
-```
 margin-left: 20px;
-
 color: #c09545;
-
 font-size: 14px;
-```
-
 }
 
 /* =========================================
@@ -641,79 +428,51 @@ font-size: 14px;
 .section {
 padding: 100px 20px;
 
-```
 background: #f5eee4;
-```
 
 }
 
-.section:nth-of-type(even) {
+.section(even) {
 background: #eee5d7;
 }
 
 .section-title {
 text-align: center;
-
-```
 max-width: 700px;
-
 margin: 0 auto 65px;
-```
-
 }
 
 .section-title > span {
 display: block;
 
-```
 margin-bottom: 12px;
 
 font-size: 10px;
-
 letter-spacing: 5px;
-
 color: #b38638;
-
 font-weight: 500;
-```
 
 }
 
 .section-title h2 {
 font-family: "Cormorant Garamond", serif;
 
-```
 font-size: clamp(50px, 7vw, 76px);
-
 line-height: 0.95;
-
 font-weight: 500;
 
 color: #1b1916;
-```
 
 }
 
 .section-title h2 em {
 color: #b6893c;
-
-```
 font-style: italic;
-```
-
 }
 
 .section-title .gold-line {
 margin-top: 28px;
-
-```
 background: #c49a4b;
-```
-
-}
-
-.section-title .gold-line::after {
-background: #f5eee4;
 }
 
 /* =========================================
@@ -722,19 +481,13 @@ background: #f5eee4;
 
 .timeline {
 max-width: 850px;
-
-```
 margin: 0 auto;
-
 position: relative;
-```
-
 }
 
 .timeline::before {
 content: "";
 
-```
 position: absolute;
 
 left: 135px;
@@ -750,14 +503,12 @@ background: linear-gradient(
     #c49a4b,
     transparent
 );
-```
 
 }
 
 .timeline-item {
 position: relative;
 
-```
 display: grid;
 
 grid-template-columns: 105px 60px 1fr;
@@ -767,35 +518,31 @@ gap: 20px;
 align-items: start;
 
 margin-bottom: 50px;
-```
 
+}
+
+.timeline-item {
+margin-bottom: 0;
 }
 
 .time {
 text-align: right;
 
-```
 padding-top: 2px;
 
 font-family: "Cormorant Garamond", serif;
-
 font-size: 29px;
 
 color: #b38335;
-
 font-weight: 600;
-```
 
 }
 
 .timeline-marker {
 position: relative;
 
-```
 display: flex;
-
 justify-content: center;
-```
 
 }
 
@@ -803,7 +550,6 @@ justify-content: center;
 width: 14px;
 height: 14px;
 
-```
 margin-top: 8px;
 
 border: 3px solid #f5eee4;
@@ -814,35 +560,28 @@ border-radius: 50%;
 
 box-shadow:
     0 0 0 1px #bd9141;
-```
 
 }
 
 .event h3 {
 font-family: "Cormorant Garamond", serif;
 
-```
 font-size: 30px;
-
 font-weight: 600;
 
 color: #211e1a;
 
 margin-bottom: 6px;
-```
 
 }
 
 .event p {
 font-size: 14px;
-
-```
 line-height: 1.7;
 
 color: #655e54;
 
 max-width: 520px;
-```
 
 }
 
@@ -852,66 +591,43 @@ max-width: 520px;
 
 .wishes-section {
 background:
-linear-gradient(
-135deg,
-#eee3d3,
-#f8f1e7
-);
+radial-gradient(
+circle at 50% 50%,
+rgba(196, 154, 75, 0.10),
+transparent 45%
+),
+#eee5d7;
 }
 
 .wish-card {
 position: relative;
 
-```
-max-width: 850px;
-
+max-width: 760px;
 margin: 0 auto;
 
-padding: 65px 55px;
+padding: 55px 60px;
 
 text-align: center;
 
 background:
     linear-gradient(
         145deg,
-        #1b1917,
-        #0d0c0b
+        #29251f,
+        #171512
     );
 
-border: 1px solid #c39a4c;
-
-border-radius: 8px;
+border: 1px solid rgba(198, 155, 75, 0.7);
+border-radius: 18px;
 
 box-shadow:
-    0 25px 55px rgba(28, 23, 16, 0.20);
-```
-
-}
-
-.wish-card::before {
-content: "";
-
-```
-position: absolute;
-
-inset: 9px;
-
-border: 1px solid rgba(204, 161, 81, 0.35);
-
-pointer-events: none;
-```
+    0 25px 60px rgba(40, 30, 18, 0.20);
 
 }
 
 .wish-decoration {
-color: #d1a75a;
-
-```
-font-size: 18px;
-
+color: #d3a85b;
+font-size: 20px;
 margin-bottom: 25px;
-```
-
 }
 
 .wish-decoration.bottom {
@@ -920,74 +636,50 @@ margin-bottom: 0;
 }
 
 .wish-card h3 {
-position: relative;
-
-```
 font-family: "Cormorant Garamond", serif;
 
 font-size: 38px;
-
 font-weight: 500;
 
 color: #f4eadb;
 
 margin-bottom: 25px;
-```
 
 }
 
 .important-text {
-position: relative;
-
-```
-max-width: 650px;
-
-margin: 0 auto;
-
 font-family: "Cormorant Garamond", serif;
 
-font-size: 25px;
-
+font-size: 24px;
 line-height: 1.45;
 
-color: #ded4c6;
-```
+color: #e0d6c8;
 
 }
 
 .wish-highlight {
-position: relative;
+margin-top: 30px;
 
-```
-max-width: 650px;
+padding: 25px;
 
-margin: 30px auto 0;
-
-padding: 20px;
-
-border-top: 1px solid rgba(201, 158, 76, 0.45);
-
-border-bottom: 1px solid rgba(201, 158, 76, 0.45);
+border-left: 2px solid #c69b4b;
+border-right: 2px solid #c69b4b;
 
 font-size: 15px;
-
 line-height: 1.7;
 
-color: #c9bca9;
-```
+color: #d9cfc0;
 
 }
 
 .wish-highlight strong {
 display: block;
 
-```
-margin-top: 7px;
+margin-top: 8px;
+
+color: #d7ae62;
 
 font-size: 17px;
-
-color: #d5ad60;
-```
 
 }
 
@@ -1000,95 +692,80 @@ text-align: center;
 }
 
 .location-card {
-max-width: 650px;
-
-```
+max-width: 700px;
 margin: 0 auto;
 
-padding: 55px 35px;
+padding: 55px 30px;
 
-border: 1px solid rgba(191, 148, 70, 0.55);
+background: rgba(255, 255, 255, 0.45);
 
-background: rgba(255, 255, 255, 0.35);
+border: 1px solid rgba(183, 137, 58, 0.35);
+border-radius: 16px;
 
 box-shadow:
-    0 15px 35px rgba(70, 54, 32, 0.07);
-```
+    0 15px 40px rgba(60, 45, 25, 0.08);
 
 }
 
 .location-symbol {
-color: #bb8c3a;
-
-```
-font-size: 24px;
+font-size: 25px;
+color: #c29543;
 
 margin-bottom: 25px;
-```
 
 }
 
 .address {
 font-family: "Cormorant Garamond", serif;
 
-```
-font-size: 25px;
+font-size: 27px;
+line-height: 1.4;
 
-line-height: 1.45;
-
-color: #2d2924;
-```
+color: #302a23;
 
 }
 
 .map-button {
 display: inline-block;
 
-```
 margin-top: 30px;
 
-padding: 14px 27px;
+padding: 14px 25px;
 
-border: 1px solid #b98d3e;
+border: 1px solid #bd9141;
 
-color: #a4762c;
-
-font-size: 9px;
-
+font-size: 10px;
 font-weight: 600;
+letter-spacing: 2px;
 
-letter-spacing: 3px;
+color: #745622;
 
 transition:
     background 0.3s ease,
-    color 0.3s ease;
-```
+    color 0.3s ease,
+    transform 0.3s ease;
 
 }
 
-.map-button:hover {
-background: #b98d3e;
+.map-button {
+background: #bd9141;
+color: #fff;
 
-```
-color: #fffaf2;
-```
+transform: translateY(-2px);
 
 }
 
 .adult-note {
 max-width: 650px;
 
-```
 margin: 35px auto 0;
 
 font-size: 11px;
-
 line-height: 1.8;
 
 letter-spacing: 0.5px;
 
-color: #817668;
-```
+color: #746b60;
 
 }
 
@@ -1097,13 +774,25 @@ color: #817668;
 ========================================= */
 
 .contacts-section {
-background: #e9dfd0;
+background: #29251f;
+color: #eee5d8;
+}
+
+.contacts-section .section-title > span {
+color: #c49a4c;
+}
+
+.contacts-section .section-title h2 {
+color: #f2e8da;
+}
+
+.contacts-section .section-title .gold-line {
+background: #c49a4c;
 }
 
 .contacts {
-max-width: 750px;
+max-width: 760px;
 
-```
 margin: 0 auto;
 
 display: grid;
@@ -1111,220 +800,155 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 
 gap: 20px;
-```
 
 }
 
 .contact-card {
 display: flex;
-
-```
 align-items: center;
 
 gap: 20px;
 
-padding: 28px;
+padding: 25px;
 
-background: #f8f1e7;
+background: #1b1916;
 
-border: 1px solid rgba(190, 147, 68, 0.45);
+border: 1px solid rgba(198, 155, 75, 0.4);
+border-radius: 14px;
 
 transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
-```
+    border-color 0.3s ease;
 
 }
 
-.contact-card:hover {
+.contact-card {
 transform: translateY(-4px);
 
-```
-box-shadow:
-    0 12px 25px rgba(55, 42, 24, 0.10);
-```
+border-color: #c69b4b;
 
 }
 
 .contact-icon {
-font-size: 24px;
-
-```
-width: 45px;
-height: 45px;
-
-display: flex;
-
-align-items: center;
-justify-content: center;
-
-border: 1px solid #c49a4c;
-
-border-radius: 50%;
-```
-
+font-size: 28px;
 }
 
 .contact-info {
 display: flex;
-
-```
 flex-direction: column;
 
-align-items: flex-start;
-```
+gap: 5px;
 
 }
 
 .contact-info small {
 font-size: 8px;
-
-```
 letter-spacing: 3px;
 
-color: #ae8034;
-
-margin-bottom: 5px;
-```
+color: #b9975c;
 
 }
 
 .contact-info strong {
 font-family: "Cormorant Garamond", serif;
 
-```
-font-size: 25px;
+font-size: 27px;
+font-weight: 500;
 
-font-weight: 600;
-
-color: #26221e;
-```
+color: #f1e7d9;
 
 }
 
 .contact-info p {
-margin-top: 4px;
-
-```
 font-size: 12px;
-
-color: #766b5e;
-```
-
+color: #bdb3a5;
 }
 
 .questions {
-margin-top: 35px;
-
-```
 text-align: center;
+
+margin-top: 35px;
 
 font-family: "Cormorant Garamond", serif;
 
-font-size: 21px;
+font-size: 22px;
 
-color: #6e6356;
-```
+color: #cfc4b5;
 
 }
 
 /* =========================================
-ФИНАЛЬНЫЙ ЭКРАН
+ФИНАЛ
 ========================================= */
 
 .final-section {
-min-height: 70vh;
+min-height: 70svh;
 
-```
 display: flex;
-
 align-items: center;
 justify-content: center;
 
-padding: 80px 20px;
-
 text-align: center;
 
-color: #f5eadb;
+padding: 100px 20px;
 
 background:
     radial-gradient(
-        circle at 50% 50%,
-        rgba(203, 160, 78, 0.13),
-        transparent 45%
+        circle at 50% 45%,
+        rgba(205, 163, 85, 0.16),
+        transparent 35%
     ),
     linear-gradient(
         135deg,
-        #0d0c0b,
-        #1b1815,
-        #0b0a09
+        #171513,
+        #29241e,
+        #12110f
     );
-```
+
+color: #f3eadf;
 
 }
 
 .final-content {
 width: 100%;
-max-width: 700px;
-}
-
-.final-content .gold-line {
-background: #c59b4d;
-}
-
-.final-content .gold-line::after {
-background: #12100e;
+max-width: 650px;
 }
 
 .final-content > p {
 margin-top: 30px;
 
-```
 font-size: 10px;
-
 letter-spacing: 6px;
 
-color: #c59b4d;
-```
+color: #c69d51;
 
 }
 
 .final-content h2 {
 margin-top: 25px;
 
-```
 font-family: "Cormorant Garamond", serif;
 
-font-size: clamp(58px, 9vw, 100px);
-
-line-height: 0.9;
+font-size: clamp(60px, 11vw, 100px);
 
 font-weight: 400;
-```
+
+line-height: 0.9;
 
 }
 
 .final-content h2 span {
-color: #d1a75b;
-
-```
+color: #d5ad63;
 font-style: italic;
-```
-
 }
 
 .final-date {
-margin-top: 35px;
+margin: 40px 0;
 
-```
-margin-bottom: 35px;
+font-size: 12px;
+letter-spacing: 7px;
 
-font-size: 11px;
-
-letter-spacing: 5px;
-
-color: #cfc3b3;
-```
+color: #bfb4a4;
 
 }
 
@@ -1333,206 +957,188 @@ FOOTER
 ========================================= */
 
 footer {
-padding: 25px 20px 30px;
+padding: 25px 20px;
 
-```
 text-align: center;
 
-background: #0b0a09;
+background: #0e0d0c;
 
-color: #777065;
+color: #8f877b;
 
-font-size: 9px;
+}
 
-letter-spacing: 2px;
-```
+footer p {
+font-family: "Cormorant Garamond", serif;
+
+font-size: 17px;
+
+letter-spacing: 1px;
 
 }
 
 footer span {
 display: block;
 
-```
-margin-top: 10px;
+margin-top: 8px;
 
-color: #bd9144;
-
-font-size: 12px;
-```
+color: #bd9141;
 
 }
 
 /* =========================================
-АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ
+АНИМАЦИЯ
 ========================================= */
 
-@media (max-width: 700px) {
+.timeline-item,
+.wish-card,
+.location-card,
+.contact-card {
+will-change: transform, opacity;
+}
 
-```
+/* =========================================
+ПЛАНШЕТЫ
+========================================= */
+
+@media (max-width: 900px) {
+
+.countdown {
+    gap: 10px;
+}
+
+.countdown-item {
+    width: 135px;
+    height: 135px;
+}
+
+.countdown-item > div {
+    font-size: 62px;
+}
+
+.countdown-separator {
+    font-size: 30px;
+}
+
+}
+
+/* =========================================
+ТЕЛЕФОНЫ
+========================================= */
+
+@media (max-width: 650px) {
+
 .hero {
     min-height: 100svh;
-
-    padding: 40px 18px;
+    padding: 50px 18px 35px;
 }
 
+.hero::before {
+    width: 360px;
+    height: 360px;
+}
+
+.hero::after {
+    width: 480px;
+    height: 480px;
+}
 
 .eyebrow {
-    font-size: 9px;
-
+    font-size: 8px;
     letter-spacing: 4px;
-
-    margin-bottom: 20px;
 }
 
-
 .hero h1 {
-    font-size: clamp(65px, 20vw, 95px);
-
+    font-size: clamp(58px, 18vw, 82px);
     letter-spacing: -1px;
 }
 
-
 .hero-greeting {
-    margin-top: 42px;
-
+    margin-top: 35px;
     font-size: 27px;
 }
 
-
 .hero-description {
-    font-size: 18px;
+    font-size: 19px;
 }
-
 
 .date-box {
     margin-top: 35px;
-
-    padding: 11px 20px;
-
+    padding: 13px 20px;
     gap: 15px;
 }
 
-
 .date-number {
-    font-size: 52px;
+    font-size: 55px;
 }
-
 
 .date-info strong {
     font-size: 11px;
-
     letter-spacing: 2px;
 }
 
-
 .date-info span {
     font-size: 8px;
-
     letter-spacing: 3px;
 }
-
 
 .scroll-hint {
-    margin-top: 48px;
+    margin-top: 45px;
 }
 
 
-
-/* СЧЁТЧИК */
+/* СЧЁТЧИК НА ТЕЛЕФОНЕ */
 
 .countdown-section {
-    padding: 70px 12px 75px;
+    padding: 80px 14px 85px;
 }
 
+.countdown-section h2 {
+    font-size: 53px;
+}
 
-.countdown-section .section-label {
+.countdown-section .gold-line {
+    margin-bottom: 38px;
+}
+
+.countdown {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    max-width: 360px;
+}
+
+.countdown-item {
+    width: 100%;
+    height: 135px;
+}
+
+.countdown-item > div {
+    font-size: 60px;
+}
+
+.countdown-item span {
+    margin-top: 15px;
     font-size: 8px;
-
     letter-spacing: 3px;
 }
 
-
-.countdown-section h2 {
-    font-size: 48px;
-}
-
-
-.countdown-section .gold-line {
-    margin-top: 25px;
-
-    margin-bottom: 35px;
-}
-
-
-.countdown {
-    gap: 6px;
-
-    width: 100%;
-}
-
-
-.countdown-item {
-    width: calc((100vw - 48px) / 4);
-
-    height: calc((100vw - 48px) / 4);
-
-    min-width: 0;
-
-    border-radius: 10px;
-}
-
-
-.countdown-item::before {
-    inset: 5px;
-
-    border-radius: 6px;
-}
-
-
-.countdown-item::after {
-    top: 6px;
-
-    font-size: 8px;
-}
-
-
-.countdown-item > div {
-    font-size: clamp(31px, 9vw, 46px);
-}
-
-
-.countdown-item span {
-    margin-top: 8px;
-
-    font-size: 6px;
-
-    letter-spacing: 1.2px;
-}
-
-
 .countdown-separator {
-    font-size: 19px;
-
-    flex-shrink: 0;
+    display: none;
 }
-
 
 .countdown-note {
-    margin-top: 28px;
-
-    font-size: 19px;
+    margin-top: 30px;
+    font-size: 21px;
 }
 
-
-.countdown-note::before {
-    margin-right: 8px;
-}
-
-
+.countdown-note::before,
 .countdown-note::after {
     margin-left: 8px;
+    margin-right: 8px;
 }
-
 
 
 /* СЕКЦИИ */
@@ -1541,224 +1147,195 @@ font-size: 12px;
     padding: 75px 18px;
 }
 
-
 .section-title {
-    margin-bottom: 48px;
+    margin-bottom: 45px;
 }
-
 
 .section-title > span {
     font-size: 8px;
-
     letter-spacing: 3px;
 }
 
-
 .section-title h2 {
-    font-size: 50px;
+    font-size: 55px;
 }
-
 
 
 /* ТАЙМИНГ */
 
 .timeline::before {
-    left: 69px;
+    left: 72px;
 }
 
-
 .timeline-item {
-    grid-template-columns: 50px 38px 1fr;
-
-    gap: 8px;
+    grid-template-columns: 52px 40px 1fr;
+    gap: 10px;
 
     margin-bottom: 40px;
 }
 
-
 .time {
-    font-size: 20px;
-
-    padding-top: 5px;
+    font-size: 22px;
 }
-
 
 .timeline-marker div {
-    width: 11px;
-    height: 11px;
-
-    margin-top: 7px;
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
 }
-
 
 .event h3 {
-    font-size: 25px;
+    font-size: 27px;
 }
-
 
 .event p {
-    font-size: 12px;
-
+    font-size: 13px;
     line-height: 1.6;
 }
-
 
 
 /* ПОЖЕЛАНИЯ */
 
 .wish-card {
-    padding: 50px 25px;
+    padding: 40px 22px;
+    border-radius: 14px;
 }
-
 
 .wish-card h3 {
-    font-size: 32px;
+    font-size: 34px;
 }
-
 
 .important-text {
     font-size: 21px;
 }
 
-
 .wish-highlight {
-    font-size: 13px;
-
-    line-height: 1.65;
+    padding: 20px 12px;
+    font-size: 14px;
 }
-
-
-.wish-highlight strong {
-    font-size: 15px;
-}
-
 
 
 /* МЕСТО */
 
-.address {
-    font-size: 21px;
-}
-
-
 .location-card {
-    padding: 45px 20px;
+    padding: 40px 18px;
 }
 
+.address {
+    font-size: 23px;
+}
+
+.map-button {
+    width: 100%;
+    max-width: 300px;
+}
 
 .adult-note {
     font-size: 10px;
 }
 
 
-
 /* КОНТАКТЫ */
 
 .contacts {
     grid-template-columns: 1fr;
-
-    gap: 14px;
+    gap: 12px;
 }
-
 
 .contact-card {
-    padding: 22px;
-
-    gap: 15px;
+    padding: 20px;
 }
-
 
 .contact-info strong {
-    font-size: 23px;
+    font-size: 25px;
 }
-
 
 
 /* ФИНАЛ */
 
 .final-section {
-    min-height: 65vh;
+    min-height: 65svh;
+    padding: 80px 20px;
 }
-
 
 .final-content h2 {
-    font-size: 68px;
+    font-size: clamp(60px, 17vw, 82px);
 }
-```
+
+.final-date {
+    font-size: 10px;
+    letter-spacing: 5px;
+}
 
 }
 
 /* =========================================
-СОВСЕМ МАЛЕНЬКИЕ ТЕЛЕФОНЫ
+МАЛЕНЬКИЕ ТЕЛЕФОНЫ
 ========================================= */
 
 @media (max-width: 380px) {
 
-```
 .hero h1 {
-    font-size: 64px;
+    font-size: 56px;
 }
-
 
 .hero-greeting {
     font-size: 24px;
 }
 
-
 .hero-description {
-    font-size: 16px;
+    font-size: 17px;
 }
 
+.date-box {
+    padding: 12px 15px;
+}
+
+.date-number {
+    font-size: 48px;
+}
 
 .countdown {
-    gap: 4px;
+    max-width: 300px;
+    gap: 10px;
 }
-
 
 .countdown-item {
-    width: calc((100vw - 38px) / 4);
-
-    height: calc((100vw - 38px) / 4);
+    height: 120px;
 }
-
 
 .countdown-item > div {
-    font-size: 27px;
+    font-size: 52px;
 }
-
 
 .countdown-item span {
-    font-size: 5px;
-
-    letter-spacing: 0.8px;
+    font-size: 7px;
+    letter-spacing: 2px;
 }
-
-
-.countdown-separator {
-    font-size: 16px;
-}
-
-
-.countdown-note {
-    font-size: 16px;
-}
-
 
 .timeline::before {
-    left: 64px;
+    left: 66px;
 }
-
 
 .timeline-item {
-    grid-template-columns: 45px 30px 1fr;
+    grid-template-columns: 48px 36px 1fr;
+    gap: 8px;
 }
 
+.time {
+    font-size: 20px;
+}
 
 .event h3 {
-    font-size: 22px;
+    font-size: 24px;
 }
 
-
 .event p {
-    font-size: 11px;
+    font-size: 12px;
+}
+
+.section-title h2 {
+    font-size: 49px;
+}
+
 }
