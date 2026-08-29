@@ -1,18 +1,16 @@
 ```javascript
-// ============================================
 // ОБРАТНЫЙ ОТСЧЁТ ДО ЮБИЛЕЯ
-// 13 ноября 2026 года, 17:45 (Москва)
-// ============================================
 
 function updateCountdown() {
 
-    const targetDate = new Date(
-        "2026-11-13T17:45:00+03:00"
-    ).getTime();
+    const targetDate =
+        new Date("2026-11-13T17:45:00+03:00").getTime();
 
-    const now = Date.now();
+    const now =
+        new Date().getTime();
 
-    const difference = targetDate - now;
+    const difference =
+        targetDate - now;
 
 
     if (difference <= 0) {
@@ -26,31 +24,44 @@ function updateCountdown() {
     }
 
 
-    const days = Math.floor(
-        difference / (1000 * 60 * 60 * 24)
-    );
+    const days =
+        Math.floor(
+            difference /
+            (1000 * 60 * 60 * 24)
+        );
 
-    const hours = Math.floor(
-        (difference / (1000 * 60 * 60)) % 24
-    );
 
-    const minutes = Math.floor(
-        (difference / (1000 * 60)) % 60
-    );
+    const hours =
+        Math.floor(
+            (difference /
+            (1000 * 60 * 60)) % 24
+        );
 
-    const seconds = Math.floor(
-        (difference / 1000) % 60
-    );
+
+    const minutes =
+        Math.floor(
+            (difference /
+            (1000 * 60)) % 60
+        );
+
+
+    const seconds =
+        Math.floor(
+            (difference / 1000) % 60
+        );
 
 
     document.getElementById("days").textContent =
         String(days).padStart(2, "0");
 
+
     document.getElementById("hours").textContent =
         String(hours).padStart(2, "0");
 
+
     document.getElementById("minutes").textContent =
         String(minutes).padStart(2, "0");
+
 
     document.getElementById("seconds").textContent =
         String(seconds).padStart(2, "0");
@@ -59,5 +70,9 @@ function updateCountdown() {
 
 updateCountdown();
 
-setInterval(updateCountdown, 1000);
+
+setInterval(
+    updateCountdown,
+    1000
+);
 ```
